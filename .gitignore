@@ -106,3 +106,5 @@ dist
 
 # prisma1
 generated
+
+.vscode
