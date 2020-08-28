@@ -108,3 +108,5 @@ dist
 generated
 
 .vscode
+
+prisma.yml
