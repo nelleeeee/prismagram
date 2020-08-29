@@ -4,12 +4,13 @@ import logger from "morgan"; // express 미들웨어 로거
 import schema from "./schema";
 import "./passport";
 import { authenticateJwt } from "./passport";
+import { isAuthenticated } from "./middlewares";
 
 const PORT = process.env.PORT || 4000;
 
 const server = new GraphQLServer({
   schema,
-  context: ({ request }) => ({ request }), // 스키마, 리졸버
+  context: ({ request }) => ({ request, isAuthenticated }), // 스키마, 리졸버, jwt인증
 });
 
 server.express.use(logger("dev")); //미들웨어 로거

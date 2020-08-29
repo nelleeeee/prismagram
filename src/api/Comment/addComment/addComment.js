@@ -9,7 +9,7 @@ export default {
       const { user } = request;
       const comment = await prisma.createComment({
         user: {
-          connent: {
+          connect: {
             id: user.id,
           },
         },
