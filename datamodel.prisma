@@ -1,6 +1,7 @@
 type User {
   id: ID! @id
   lastName: String
+  avatar: String
   firstName: String @default(value: "")
   bio: String
   posts: [Post!]! @relation(name: "PostsOfUser", onDelete:"CASCADE")
