@@ -10,7 +10,9 @@ type User {
   username: String!
   email: String!
   following: [User!]!
+  followingCount: Int!
   followers: [User!]!
+  followersCount: Int!
   rooms: [Room!]!
   loginSecret: String!
   fullName: String
@@ -73,13 +75,6 @@ type Message {
   from: User!
   to: User!
   room: Room!
-  createdAt: String!
-  updatedAt: String!
-}
-
-type UserProfile {
-  user: User!
-  posts: [Post!]!
   createdAt: String!
   updatedAt: String!
 }
